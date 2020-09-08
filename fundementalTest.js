@@ -7,7 +7,7 @@ function sumTest() {
     expect(result).toBe(expected)
 }
 
-test('sum adds numbers', sumTest)
+test('sum adds two numbers', sumTest)
 
 
 /**
@@ -28,6 +28,7 @@ function expect(actual) {
     return {
         toBe(expected) {
             if(actual !== expected) {
+                console.log(`expected ${expected} result was ${actual}`)
                 throw new Error(`${actual} is not equal to ${expected}`)
             } else {
                 console.log(`%c ${actual} is equal to ${expected}, success`, 'background: #bada55; color: #111');
